@@ -37,7 +37,7 @@ def input_app():
   db['food'] = food
   db['pic'] = pic
   db['water'] = water
-  return output
+  return "done"
 
 
 
