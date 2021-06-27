@@ -25,7 +25,8 @@ def input_hardware():
 @app.route('/output_app')
 def output_app():
   temp = db['temp']
-  dict = {"temperature": temp}
+  url = db['url']
+  dict = {"temperature": temp, "url": url}
   output = json.dumps(dict)
   return output
 
