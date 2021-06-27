@@ -29,4 +29,16 @@ def output_app():
 
 
 
+@app.route('/input_app')
+def input_app():
+  food = request.args.get('food')
+  pic = request.args.get('pic')
+  water = request.args.get('water')
+  db['food'] = food
+  db['pic'] = pic
+  db['water'] = water
+  return output
+
+
+
 app.run(host='0.0.0.0', port=8080)
