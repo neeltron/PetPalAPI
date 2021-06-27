@@ -1,5 +1,6 @@
 from flask import Flask, request
 from replit import db
+import json
 
 
 
@@ -16,6 +17,15 @@ def input_hardware():
   temp = request.args.get('temp')
   db['temp'] = temp
   return temp
+
+
+
+@app.route('/output_app')
+def output_app():
+  temp = db['temp']
+  dict = {"temperature": temp}
+  output = json.dumps(dict)
+  return output
 
 
 
