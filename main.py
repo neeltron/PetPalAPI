@@ -41,4 +41,13 @@ def input_app():
 
 
 
+@app.route('/output_hardware')
+def output_hardware():
+  food = db['food']
+  pic = db['pic']
+  water = db['water']
+  return food + " " + pic + " " + water
+
+
+
 app.run(host='0.0.0.0', port=8080)
