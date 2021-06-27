@@ -36,10 +36,8 @@ def output_app():
 def input_app():
   food = request.args.get('food')
   pic = request.args.get('pic')
-  water = request.args.get('water')
   db['food'] = food
   db['pic'] = pic
-  db['water'] = water
   return "done"
 
 
@@ -48,8 +46,7 @@ def input_app():
 def output_hardware():
   food = db['food']
   pic = db['pic']
-  water = db['water']
-  return food + " " + pic + " " + water
+  return food + " " + pic
 
 
 
