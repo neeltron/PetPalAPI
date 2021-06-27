@@ -15,7 +15,9 @@ def hello_world():
 @app.route('/input_hardware')
 def input_hardware():
   temp = request.args.get('temp')
+  url = request.args.get('url')
   db['temp'] = temp
+  db['url'] = url
   return temp
 
 
